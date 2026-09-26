@@ -1,14 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.OutrankRestApiApi = void 0;
-class OutrankRestApiApi {
+exports.OutrankApi = void 0;
+class OutrankApi {
     constructor() {
-        this.name = "outrankRestApiApi";
-        this.displayName = "Outrank REST API";
+        this.name = "outrankApi";
+        this.displayName = "Outrank API";
         this.documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-outrank";
         this.icon = {
-            light: "file:../nodes/OutrankRestApi/outrankRestApi.svg",
-            dark: "file:../nodes/OutrankRestApi/outrankRestApi.dark.svg"
+            light: "file:../nodes/Outrank/outrank.svg",
+            dark: "file:../nodes/Outrank/outrank.dark.svg"
         };
         this.properties = [
             {
@@ -38,5 +38,5 @@ class OutrankRestApiApi {
         };
     }
 }
-exports.OutrankRestApiApi = OutrankRestApiApi;
-//# sourceMappingURL=OutrankRestApiApi.credentials.js.map
+exports.OutrankApi = OutrankApi;
+//# sourceMappingURL=OutrankApi.credentials.js.map

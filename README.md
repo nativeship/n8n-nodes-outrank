@@ -1,4 +1,4 @@
-# Outrank REST API n8n community node
+# Outrank n8n community node
 
 Automate SEO content creation, keyword research, article generation, and Search Console monitoring with Outrank
 
@@ -107,12 +107,12 @@ Configure the generated bearer token credential in n8n before using the node.
 ## Usage
 
 1. Install this community-node package in n8n.
-2. Add the **Outrank REST API** node to a workflow.
+2. Add the **Outrank** node to a workflow.
 3. Select a resource and operation, configure its parameters, and execute the workflow.
 
 ## Example workflow
 
-Connect **Manual Trigger** -> **Outrank REST API** -> a destination node, select an operation, then run the workflow and inspect the returned items.
+Connect **Manual Trigger** -> **Outrank** -> a destination node, select an operation, then run the workflow and inspect the returned items.
 
 ## Development
 
@@ -123,4 +123,4 @@ npm run lint
 npm run dev
 ```
 
-`npm run dev` starts a local n8n development instance. Find the integration by its **Outrank REST API** display name.
+`npm run dev` starts a local n8n development instance. Find the integration by its **Outrank** display name.

@@ -1,13 +1,13 @@
 import { type IAuthenticateGeneric, type Icon, type ICredentialTestRequest, type ICredentialType, type INodeProperties } from "n8n-workflow";
 
 // Generated with ts-morph
-export class OutrankRestApiApi implements ICredentialType {
-  name = "outrankRestApiApi";
-  displayName = "Outrank REST API";
+export class OutrankApi implements ICredentialType {
+  name = "outrankApi";
+  displayName = "Outrank API";
   documentationUrl = "https://nativeship.io/nodes/@nativeship/n8n-nodes-outrank";
   icon: Icon = {
-        light: "file:../nodes/OutrankRestApi/outrankRestApi.svg",
-        dark: "file:../nodes/OutrankRestApi/outrankRestApi.dark.svg"
+        light: "file:../nodes/Outrank/outrank.svg",
+        dark: "file:../nodes/Outrank/outrank.dark.svg"
     };
   properties: INodeProperties[] = [
         {

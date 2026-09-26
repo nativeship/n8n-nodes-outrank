@@ -29,17 +29,17 @@
   ],
   "n8n": {
     "credentials": [
-      "dist/credentials/OutrankRestApiApi.credentials.js"
+      "dist/credentials/OutrankApi.credentials.js"
     ],
     "n8nNodesApiVersion": 1,
     "nodes": [
-      "dist/nodes/OutrankRestApi/OutrankRestApi.node.js"
+      "dist/nodes/Outrank/Outrank.node.js"
     ],
     "strict": true
   },
   "name": "@nativeship/n8n-nodes-outrank",
   "nativeShip": {
-    "artifactSha256": "ddf4ba1de4ddb6a751bb13271f392c4b12ed76807a90eaf12f2047f1010ca3a6"
+    "artifactSha256": "ad42817e5918b574a293a3e04383c18bf89431f5c9645f4eb51a274511c2990c"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
@@ -57,5 +57,5 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix"
   },
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

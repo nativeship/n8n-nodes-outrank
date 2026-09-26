@@ -1,5 +1,5 @@
 import { type IAuthenticateGeneric, type Icon, type ICredentialTestRequest, type ICredentialType, type INodeProperties } from "n8n-workflow";
-export declare class OutrankRestApiApi implements ICredentialType {
+export declare class OutrankApi implements ICredentialType {
     name: string;
     displayName: string;
     documentationUrl: string;

@@ -24,11 +24,11 @@
     "license": "MIT",
     "n8n": {
         "credentials": [
-            "dist/credentials/OutrankRestApiApi.credentials.js"
+            "dist/credentials/OutrankApi.credentials.js"
         ],
         "n8nNodesApiVersion": 1,
         "nodes": [
-            "dist/nodes/OutrankRestApi/OutrankRestApi.node.js"
+            "dist/nodes/Outrank/Outrank.node.js"
         ],
         "strict": true
     },

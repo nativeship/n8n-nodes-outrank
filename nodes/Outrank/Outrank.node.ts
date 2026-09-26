@@ -152,13 +152,13 @@ function valueAtPath(value: unknown, path: string): unknown {
   }, value);
 }
 
-export class OutrankRestApi implements INodeType {
+export class Outrank implements INodeType {
   description: INodeTypeDescription = {
-        displayName: "Outrank REST API",
-        name: "outrankRestApi",
+        displayName: "Outrank",
+        name: "outrank",
         icon: {
-            light: "file:outrankRestApi.svg",
-            dark: "file:outrankRestApi.dark.svg"
+            light: "file:outrank.svg",
+            dark: "file:outrank.dark.svg"
         },
         group: [],
         version: [
@@ -187,7 +187,7 @@ export class OutrankRestApi implements INodeType {
             }
         ],
         defaults: {
-            name: "Outrank REST API"
+            name: "Outrank"
         },
         usableAsTool: true,
         inputs: [
@@ -198,7 +198,7 @@ export class OutrankRestApi implements INodeType {
         ],
         credentials: [
             {
-                name: "outrankRestApiApi",
+                name: "outrankApi",
                 required: true
             }
         ],
@@ -1354,7 +1354,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1373,7 +1373,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1392,7 +1392,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1412,7 +1412,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1444,7 +1444,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1463,7 +1463,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1482,7 +1482,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1501,7 +1501,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1520,7 +1520,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1539,7 +1539,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1558,7 +1558,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1577,7 +1577,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1597,7 +1597,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1616,7 +1616,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1635,7 +1635,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1654,7 +1654,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1673,7 +1673,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1692,7 +1692,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1724,7 +1724,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1743,7 +1743,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1762,7 +1762,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1781,7 +1781,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1802,7 +1802,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1821,7 +1821,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1840,7 +1840,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1859,7 +1859,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "PATCH" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1878,7 +1878,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1897,7 +1897,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1916,7 +1916,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1936,7 +1936,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "GET" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
@@ -1956,7 +1956,7 @@ export class OutrankRestApi implements INodeType {
         
         const serverBaseUrl = resolveServerBaseUrl(this as never, [{"id":"documentServer1HttpsWwwOutrankSoApiAgentV1","url":"https://www.outrank.so/api/agent/v1","kind":"selectable","variables":[]}], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
         options = { method: "POST" as unknown as IHttpRequestOptions["method"], url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
-        credentialApplications = ([{"credentialType":"outrankRestApiApi","type":"bearer"}]) as CredentialApplication[];
+        credentialApplications = ([{"credentialType":"outrankApi","type":"bearer"}]) as CredentialApplication[];
         retryContract = { mode: "none", retryConnectionFailures: false, retryTimeouts: false, retryRateLimits: false, retryServerErrors: false, maxAttempts: 1, maxElapsedMs: 30000, baseBackoffMs: 500, maxBackoffMs: 5000, jitterRatio: 0.2, idempotency: undefined };
         pagination = { style: "none", page: "", limit: "", cursor: "", responseCursor: "", hasMore: "", itemPath: "", advancement: "", maxPages: 1, maxItems: Number.POSITIVE_INFINITY, maxElapsedMs: 30000, maxMemoryBytes: 10485760, repeatedCursorLimit: 1, repeatedPageLimit: 1, pageSize: 100 };
         responsePlan = { binary: false, full: false, envelopePath: "", itemPath: "", fields: [], simplified: [] };
