@@ -1,0 +1,4253 @@
+{
+  "schemaVersion": 1,
+  "fixtures": [
+    {
+      "operationId": "bulkReplaceArticles",
+      "method": "POST",
+      "path": "/articles/bulk-replace",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "bulkReplaceArticles",
+        "method": "POST",
+        "path": "/articles/bulk-replace",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/articles/bulk-replace",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "generateArticle",
+      "method": "POST",
+      "path": "/articles/generate",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": [
+          {
+            "name": "keyword_id",
+            "inputName": "keyword_id",
+            "sample": "value/id",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "generateArticle",
+        "method": "POST",
+        "path": "/articles/generate",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/articles/generate",
+          "query": [],
+          "body": [
+            {
+              "name": "keyword_id",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getArticle",
+      "method": "GET",
+      "path": "/articles/{id}",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getArticle",
+        "method": "GET",
+        "path": "/articles/{id}",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/articles/{{$parameter[\"id\"]}}",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getArticleContent",
+      "method": "GET",
+      "path": "/articles/{id}/content",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "format",
+          "inputName": "format",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getArticleContent",
+        "method": "GET",
+        "path": "/articles/{id}/content",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/articles/{{$parameter[\"id\"]}}/content",
+          "query": [
+            {
+              "name": "format",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "listArticles",
+      "method": "GET",
+      "path": "/articles",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "product_id",
+          "inputName": "product_id",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "status",
+          "inputName": "status",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "title",
+          "inputName": "title",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "keyword",
+          "inputName": "keyword",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "content",
+          "inputName": "content",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "slug",
+          "inputName": "slug",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "created_from",
+          "inputName": "created_from",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "created_to",
+          "inputName": "created_to",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "scheduled_from",
+          "inputName": "scheduled_from",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "scheduled_to",
+          "inputName": "scheduled_to",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "sort_by",
+          "inputName": "sort_by",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "sort_order",
+          "inputName": "sort_order",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "limit",
+          "inputName": "limit",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "offset",
+          "inputName": "offset",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "listArticles",
+        "method": "GET",
+        "path": "/articles",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/articles",
+          "query": [
+            {
+              "name": "product_id",
+              "source": "additionalFields"
+            },
+            {
+              "name": "status",
+              "source": "additionalFields"
+            },
+            {
+              "name": "title",
+              "source": "additionalFields"
+            },
+            {
+              "name": "keyword",
+              "source": "additionalFields"
+            },
+            {
+              "name": "content",
+              "source": "additionalFields"
+            },
+            {
+              "name": "slug",
+              "source": "additionalFields"
+            },
+            {
+              "name": "created_from",
+              "source": "additionalFields"
+            },
+            {
+              "name": "created_to",
+              "source": "additionalFields"
+            },
+            {
+              "name": "scheduled_from",
+              "source": "additionalFields"
+            },
+            {
+              "name": "scheduled_to",
+              "source": "additionalFields"
+            },
+            {
+              "name": "sort_by",
+              "source": "additionalFields"
+            },
+            {
+              "name": "sort_order",
+              "source": "additionalFields"
+            },
+            {
+              "name": "limit",
+              "source": "additionalFields"
+            },
+            {
+              "name": "offset",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "precreateArticle",
+      "method": "POST",
+      "path": "/articles/precreate",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": [
+          {
+            "name": "keyword_id",
+            "inputName": "keyword_id",
+            "sample": "value/id",
+            "type": "string",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "precreateArticle",
+        "method": "POST",
+        "path": "/articles/precreate",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/articles/precreate",
+          "query": [],
+          "body": [
+            {
+              "name": "keyword_id",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "replaceArticle",
+      "method": "POST",
+      "path": "/articles/{id}/replace",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "replaceArticle",
+        "method": "POST",
+        "path": "/articles/{id}/replace",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/articles/{{$parameter[\"id\"]}}/replace",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "retryArticlePublish",
+      "method": "POST",
+      "path": "/articles/{id}/retry-publish",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "retryArticlePublish",
+        "method": "POST",
+        "path": "/articles/{id}/retry-publish",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/articles/{{$parameter[\"id\"]}}/retry-publish",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getCurrentIdentity",
+      "method": "GET",
+      "path": "/auth/whoami",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getCurrentIdentity",
+        "method": "GET",
+        "path": "/auth/whoami",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/auth/whoami",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getBillingPortalUrl",
+      "method": "GET",
+      "path": "/billing/portal-url",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getBillingPortalUrl",
+        "method": "GET",
+        "path": "/billing/portal-url",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/billing/portal-url",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getSubscriptionStatus",
+      "method": "GET",
+      "path": "/subscription/status",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getSubscriptionStatus",
+        "method": "GET",
+        "path": "/subscription/status",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/subscription/status",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getUsageStats",
+      "method": "GET",
+      "path": "/usage/stats",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getUsageStats",
+        "method": "GET",
+        "path": "/usage/stats",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/usage/stats",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "purchaseProducts",
+      "method": "POST",
+      "path": "/billing/purchase-products",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "Idempotency-Key",
+          "inputName": "Idempotency-Key",
+          "sample": "value/id",
+          "location": "header",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": [
+          {
+            "name": "additional_products",
+            "inputName": "additional_products",
+            "sample": 2,
+            "type": "integer",
+            "required": true
+          },
+          {
+            "name": "confirm_charge_cents",
+            "inputName": "confirm_charge_cents",
+            "sample": 2,
+            "type": "integer",
+            "required": false
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "409",
+          "title": "The official CLI handles this response as a quote result; quote details are returned in the error object."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "purchaseProducts",
+        "method": "POST",
+        "path": "/billing/purchase-products",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/billing/purchase-products",
+          "query": [
+            {
+              "name": "Idempotency-Key",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [
+            {
+              "name": "additional_products",
+              "source": "parameter"
+            },
+            {
+              "name": "confirm_charge_cents",
+              "source": "additionalFields"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "409",
+            "title": "The official CLI handles this response as a quote result; quote details are returned in the error object."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "bulkDeleteKeywords",
+      "method": "POST",
+      "path": "/keywords/bulk-delete",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "bulkDeleteKeywords",
+        "method": "POST",
+        "path": "/keywords/bulk-delete",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/keywords/bulk-delete",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "bulkProcessKeywords",
+      "method": "POST",
+      "path": "/keywords/bulk-process",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "bulkProcessKeywords",
+        "method": "POST",
+        "path": "/keywords/bulk-process",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/keywords/bulk-process",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "bulkRescheduleKeywords",
+      "method": "POST",
+      "path": "/keywords/bulk-reschedule",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "bulkRescheduleKeywords",
+        "method": "POST",
+        "path": "/keywords/bulk-reschedule",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/keywords/bulk-reschedule",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "exportKeywords",
+      "method": "GET",
+      "path": "/keywords/export",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "product_id",
+          "inputName": "product_id",
+          "sample": "value/id",
+          "location": "query",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "exportKeywords",
+        "method": "GET",
+        "path": "/keywords/export",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/keywords/export",
+          "query": [
+            {
+              "name": "product_id",
+              "source": "parameter"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "generateKeywords",
+      "method": "POST",
+      "path": "/keywords/generate",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "generateKeywords",
+        "method": "POST",
+        "path": "/keywords/generate",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/keywords/generate",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "listKeywords",
+      "method": "GET",
+      "path": "/keywords",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "product_id",
+          "inputName": "product_id",
+          "sample": "value/id",
+          "location": "query",
+          "required": true,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "scope",
+          "inputName": "scope",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "status",
+          "inputName": "status",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "q",
+          "inputName": "q",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "article_type",
+          "inputName": "article_type",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "article_subtype",
+          "inputName": "article_subtype",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "scheduled_from",
+          "inputName": "scheduled_from",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "scheduled_to",
+          "inputName": "scheduled_to",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "search_volume_min",
+          "inputName": "search_volume_min",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "search_volume_max",
+          "inputName": "search_volume_max",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "difficulty_min",
+          "inputName": "difficulty_min",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "difficulty_max",
+          "inputName": "difficulty_max",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "limit",
+          "inputName": "limit",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "offset",
+          "inputName": "offset",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "listKeywords",
+        "method": "GET",
+        "path": "/keywords",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/keywords",
+          "query": [
+            {
+              "name": "product_id",
+              "source": "parameter"
+            },
+            {
+              "name": "scope",
+              "source": "additionalFields"
+            },
+            {
+              "name": "status",
+              "source": "additionalFields"
+            },
+            {
+              "name": "q",
+              "source": "additionalFields"
+            },
+            {
+              "name": "article_type",
+              "source": "additionalFields"
+            },
+            {
+              "name": "article_subtype",
+              "source": "additionalFields"
+            },
+            {
+              "name": "scheduled_from",
+              "source": "additionalFields"
+            },
+            {
+              "name": "scheduled_to",
+              "source": "additionalFields"
+            },
+            {
+              "name": "search_volume_min",
+              "source": "additionalFields"
+            },
+            {
+              "name": "search_volume_max",
+              "source": "additionalFields"
+            },
+            {
+              "name": "difficulty_min",
+              "source": "additionalFields"
+            },
+            {
+              "name": "difficulty_max",
+              "source": "additionalFields"
+            },
+            {
+              "name": "limit",
+              "source": "additionalFields"
+            },
+            {
+              "name": "offset",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "suggestKeywords",
+      "method": "POST",
+      "path": "/keywords/suggest",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "suggestKeywords",
+        "method": "POST",
+        "path": "/keywords/suggest",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/keywords/suggest",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "createProduct",
+      "method": "POST",
+      "path": "/products",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "createProduct",
+        "method": "POST",
+        "path": "/products",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/products",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getProduct",
+      "method": "GET",
+      "path": "/products/{id}",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getProduct",
+        "method": "GET",
+        "path": "/products/{id}",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/products/{{$parameter[\"id\"]}}",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "listProducts",
+      "method": "GET",
+      "path": "/products",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "status",
+          "inputName": "status",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "limit",
+          "inputName": "limit",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "cursor",
+          "inputName": "cursor",
+          "sample": "value/id",
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "listProducts",
+        "method": "GET",
+        "path": "/products",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/products",
+          "query": [
+            {
+              "name": "status",
+              "source": "additionalFields"
+            },
+            {
+              "name": "limit",
+              "source": "additionalFields"
+            },
+            {
+              "name": "cursor",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "pauseProduct",
+      "method": "POST",
+      "path": "/products/{id}/pause",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "pauseProduct",
+        "method": "POST",
+        "path": "/products/{id}/pause",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/products/{{$parameter[\"id\"]}}/pause",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "resumeProduct",
+      "method": "POST",
+      "path": "/products/{id}/resume",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "resumeProduct",
+        "method": "POST",
+        "path": "/products/{id}/resume",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/products/{{$parameter[\"id\"]}}/resume",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "updateProduct",
+      "method": "PATCH",
+      "path": "/products/{id}",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "raw",
+        "fields": [
+          {
+            "name": "bodyJson",
+            "inputName": "bodyJson",
+            "sample": {},
+            "type": "object",
+            "required": true
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "updateProduct",
+        "method": "PATCH",
+        "path": "/products/{id}",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "PATCH",
+          "url": "=/products/{{$parameter[\"id\"]}}",
+          "query": [],
+          "body": [
+            {
+              "name": "bodyJson",
+              "source": "parameter"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": [
+          "raw or blocked request body",
+          "advanced parameter bodyJson"
+        ]
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "connectSearchConsole",
+      "method": "POST",
+      "path": "/products/{id}/gsc/connect",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "connectSearchConsole",
+        "method": "POST",
+        "path": "/products/{id}/gsc/connect",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/products/{{$parameter[\"id\"]}}/gsc/connect",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getSearchConsoleCannibalization",
+      "method": "GET",
+      "path": "/products/{id}/gsc/cannibalization",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getSearchConsoleCannibalization",
+        "method": "GET",
+        "path": "/products/{id}/gsc/cannibalization",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/products/{{$parameter[\"id\"]}}/gsc/cannibalization",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getSearchConsoleConnection",
+      "method": "GET",
+      "path": "/products/{id}/gsc",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getSearchConsoleConnection",
+        "method": "GET",
+        "path": "/products/{id}/gsc",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/products/{{$parameter[\"id\"]}}/gsc",
+          "query": [],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "getSearchConsolePerformance",
+      "method": "GET",
+      "path": "/products/{id}/gsc/performance",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        },
+        {
+          "name": "months",
+          "inputName": "months",
+          "sample": 2,
+          "location": "query",
+          "required": false,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": []
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "getSearchConsolePerformance",
+        "method": "GET",
+        "path": "/products/{id}/gsc/performance",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "GET",
+          "url": "=/products/{{$parameter[\"id\"]}}/gsc/performance",
+          "query": [
+            {
+              "name": "months",
+              "source": "additionalFields"
+            }
+          ],
+          "body": [],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    },
+    {
+      "operationId": "inspectSearchConsoleUrl",
+      "method": "POST",
+      "path": "/products/{id}/gsc/url-inspection",
+      "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+      "authentication": [
+        {
+          "schemes": [
+            "bearerAuth"
+          ],
+          "scopes": []
+        }
+      ],
+      "parameters": [
+        {
+          "name": "id",
+          "inputName": "id",
+          "sample": "value/id",
+          "location": "path",
+          "required": true,
+          "arrayFormat": "indices"
+        }
+      ],
+      "request": {
+        "contentType": "application/json",
+        "representation": "structured",
+        "fields": [
+          {
+            "name": "inspection_url",
+            "inputName": "inspection_url",
+            "sample": "value/id",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "language_code",
+            "inputName": "language_code",
+            "sample": "value/id",
+            "type": "string",
+            "required": false
+          }
+        ]
+      },
+      "retry": {},
+      "pagination": {
+        "style": "none"
+      },
+      "response": {},
+      "errors": [
+        {
+          "status": "400",
+          "title": "Invalid request body or query parameters."
+        },
+        {
+          "status": "401",
+          "title": "Missing, malformed, expired, or revoked API key."
+        },
+        {
+          "status": "403",
+          "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+        },
+        {
+          "status": "404",
+          "title": "The resource does not exist or belongs to another organization."
+        },
+        {
+          "status": "429",
+          "title": "Rate limit exceeded. Honor Retry-After before retrying."
+        },
+        {
+          "status": "5XX",
+          "title": "Transient server error. Retry idempotent calls with backoff."
+        }
+      ],
+      "requestPlan": {
+        "operationId": "inspectSearchConsoleUrl",
+        "method": "POST",
+        "path": "/products/{id}/gsc/url-inspection",
+        "serverId": "documentServer1HttpsWwwOutrankSoApiAgentV1",
+        "request": {
+          "method": "POST",
+          "url": "=/products/{{$parameter[\"id\"]}}/gsc/url-inspection",
+          "query": [],
+          "body": [
+            {
+              "name": "inspection_url",
+              "source": "parameter"
+            },
+            {
+              "name": "language_code",
+              "source": "additionalFields"
+            }
+          ],
+          "headers": {
+            "Accept": "application/json",
+            "Content-Type": "application/json"
+          }
+        },
+        "authentication": [
+          {
+            "schemes": [
+              "bearerAuth"
+            ],
+            "scopes": []
+          }
+        ],
+        "retry": {},
+        "pagination": {
+          "style": "none"
+        },
+        "response": {},
+        "errors": [
+          {
+            "status": "400",
+            "title": "Invalid request body or query parameters."
+          },
+          {
+            "status": "401",
+            "title": "Missing, malformed, expired, or revoked API key."
+          },
+          {
+            "status": "403",
+            "title": "The organization's plan does not support the operation or access to the resource is unavailable."
+          },
+          {
+            "status": "404",
+            "title": "The resource does not exist or belongs to another organization."
+          },
+          {
+            "status": "429",
+            "title": "Rate limit exceeded. Honor Retry-After before retrying."
+          },
+          {
+            "status": "5XX",
+            "title": "Transient server error. Retry idempotent calls with backoff."
+          }
+        ],
+        "unsupportedSemantics": []
+      },
+      "assertions": [
+        "retry attempts preserve request and pagination state until a response succeeds",
+        "pagination advances only after a completed page response",
+        "pagination terminates within declared page, item, elapsed-time, memory, repeated-cursor, and repeated-page budgets"
+      ]
+    }
+  ],
+  "triggerFixtures": []
+}

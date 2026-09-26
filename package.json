@@ -1,0 +1,56 @@
+{
+  "author": {
+    "name": "nativeship",
+    "url": "https://github.com/nativeship"
+  },
+  "description": "Automate SEO content creation, keyword research, article generation, and Search Console monitoring with Outrank",
+  "devDependencies": {
+    "@n8n/node-cli": "0.41.2",
+    "@types/node": "22.15.29",
+    "eslint": "9.29.0",
+    "prettier": "3.6.2",
+    "typescript": "5.9.3"
+  },
+  "engines": {
+    "node": "\u003e=22.22.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "homepage": "https://github.com/nativeship/n8n-nodes-outrank",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "n8n": {
+    "credentials": [
+      "dist/credentials/OutrankRestApiApi.credentials.js"
+    ],
+    "n8nNodesApiVersion": 1,
+    "nodes": [
+      "dist/nodes/OutrankRestApi/OutrankRestApi.node.js"
+    ],
+    "strict": true
+  },
+  "name": "@nativeship/n8n-nodes-outrank",
+  "nativeShip": {
+    "artifactSha256": "ddf4ba1de4ddb6a751bb13271f392c4b12ed76807a90eaf12f2047f1010ca3a6"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nativeship/n8n-nodes-outrank.git"
+  },
+  "scripts": {
+    "build": "n8n-node build",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix"
+  },
+  "version": "1.0.0"
+}
