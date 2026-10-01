@@ -4342,7 +4342,7 @@
           "path": "/products/{id}/gsc/url-inspection"
         },
         "displayName": "Inspect Search Console URL",
-        "description": "Inspects Google indexation and crawl status for a specific URL on the product",
+        "description": "Inspects Google indexation and crawl status for a specific URL on the product.",
         "hidden": false,
         "resource": "searchConsole"
       },

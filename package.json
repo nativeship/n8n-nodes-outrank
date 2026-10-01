@@ -1,5 +1,6 @@
 {
   "author": {
+    "email": "work.bhshekhaliya@gmail.com",
     "name": "nativeship",
     "url": "https://github.com/nativeship"
   },
@@ -22,11 +23,6 @@
     "n8n-community-node-package"
   ],
   "license": "MIT",
-  "maintainers": [
-    {
-      "name": "nativeship"
-    }
-  ],
   "n8n": {
     "credentials": [
       "dist/credentials/OutrankApi.credentials.js"
@@ -39,7 +35,7 @@
   },
   "name": "@nativeship/n8n-nodes-outrank",
   "nativeShip": {
-    "artifactSha256": "ad42817e5918b574a293a3e04383c18bf89431f5c9645f4eb51a274511c2990c"
+    "artifactSha256": "972277cff2f9bd5cbc05b2cec945b96305bdb544e083085134047b4b954a774e"
   },
   "peerDependencies": {
     "n8n-workflow": "*"
@@ -57,5 +53,5 @@
     "lint": "n8n-node lint",
     "lint:fix": "n8n-node lint --fix"
   },
-  "version": "1.0.2"
+  "version": "1.0.3"
 }

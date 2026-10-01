@@ -161,8 +161,9 @@ class Outrank {
             version: [
                 1
             ],
-            subtitle: "={{$parameter[\"operation\"] + \": \" + $parameter[\"resource\"]}}",
+            subtitle: "={{((JSON.parse(\"\\u007b\\\"articles\\\":\\u007b\\\"bulkReplaceArticles\\\":\\\"bulkReplaceArticles: article\\\",\\\"generateArticle\\\":\\\"generateArticle: article\\\",\\\"getArticle\\\":\\\"getArticle: article\\\",\\\"getArticleContent\\\":\\\"getArticleContent: article\\\",\\\"listArticles\\\":\\\"getManyArticles: article\\\",\\\"precreateArticle\\\":\\\"precreateArticle: article\\\",\\\"replaceArticle\\\":\\\"replaceArticle: article\\\",\\\"retryArticlePublish\\\":\\\"retryPublishArticle: article\\\"\\u007d,\\\"billingUsage\\\":\\u007b\\\"getBillingPortalUrl\\\":\\\"getBillingPortalUrl: billingUsage\\\",\\\"getSubscriptionStatus\\\":\\\"getSubscriptionStatus: billingUsage\\\",\\\"getUsageStats\\\":\\\"getUsageStats: billingUsage\\\"\\u007d,\\\"keywords\\\":\\u007b\\\"bulkDeleteKeywords\\\":\\\"bulkDeleteKeywords: keyword\\\",\\\"bulkProcessKeywords\\\":\\\"bulkProcessKeywords: keyword\\\",\\\"bulkRescheduleKeywords\\\":\\\"bulkRescheduleKeywords: keyword\\\",\\\"exportKeywords\\\":\\\"exportKeywords: keyword\\\",\\\"generateKeywords\\\":\\\"generateKeywords: keyword\\\",\\\"listKeywords\\\":\\\"getManyKeywords: keyword\\\",\\\"suggestKeywords\\\":\\\"suggestKeywords: keyword\\\"\\u007d,\\\"products\\\":\\u007b\\\"createProduct\\\":\\\"createProduct: product\\\",\\\"getProduct\\\":\\\"getProduct: product\\\",\\\"listProducts\\\":\\\"getManyProducts: product\\\",\\\"pauseProduct\\\":\\\"pauseProduct: product\\\",\\\"resumeProduct\\\":\\\"resumeAProduct: product\\\",\\\"updateProduct\\\":\\\"updateProduct: product\\\"\\u007d,\\\"searchConsole\\\":\\u007b\\\"connectSearchConsole\\\":\\\"connectSearchConsole: searchConsole\\\",\\\"getSearchConsoleCannibalization\\\":\\\"getKeywordCannibalization: searchConsole\\\",\\\"getSearchConsoleConnection\\\":\\\"getSearchConsoleConnection: searchConsole\\\",\\\"getSearchConsolePerformance\\\":\\\"getSearchConsolePerformance: searchConsole\\\",\\\"inspectSearchConsoleUrl\\\":\\\"inspectSearchConsoleUrl: searchConsole\\\"\\u007d\\u007d\"))[$parameter[\"resource\"]] || {})[$parameter[\"operation\"]] || ($parameter[\"operation\"] + \": \" + $parameter[\"resource\"])}}",
             description: "Automate SEO content creation, keyword research, article generation, and Search Console monitoring with Outrank",
+            documentationUrl: "https://nativeship.io/nodes/@nativeship/n8n-nodes-outrank",
             hints: [
                 {
                     message: "Operation \"listArticles\" looks paginated, but no explicit safe Pagination Contract is available. The generated operation remains single-page until an explicit bounded Pagination Contract is provided.",
@@ -386,7 +387,8 @@ class Outrank {
                             displayName: "Format",
                             name: "format",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Format to use for the article content response"
                         }
                     ]
                 },
@@ -411,25 +413,29 @@ class Outrank {
                             displayName: "Content",
                             name: "content",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by content text"
                         },
                         {
                             displayName: "Created From",
                             name: "created_from",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include articles created on or after this date"
                         },
                         {
                             displayName: "Created To",
                             name: "created_to",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include articles created on or before this date"
                         },
                         {
                             displayName: "Keyword",
                             name: "keyword",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by keyword"
                         },
                         {
                             displayName: "Limit",
@@ -454,49 +460,57 @@ class Outrank {
                             displayName: "Product ID",
                             name: "product_id",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by product ID"
                         },
                         {
                             displayName: "Scheduled From",
                             name: "scheduled_from",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include articles scheduled on or after this date"
                         },
                         {
                             displayName: "Scheduled To",
                             name: "scheduled_to",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include articles scheduled on or before this date"
                         },
                         {
                             displayName: "Slug",
                             name: "slug",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by URL slug"
                         },
                         {
                             displayName: "Sort By",
                             name: "sort_by",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Article field used to sort the results"
                         },
                         {
                             displayName: "Sort Order",
                             name: "sort_order",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Order in which to sort the results"
                         },
                         {
                             displayName: "Status",
                             name: "status",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by status"
                         },
                         {
                             displayName: "Title",
                             name: "title",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter articles by title text"
                         }
                     ]
                 },
@@ -724,6 +738,7 @@ class Outrank {
                     type: "string",
                     default: "",
                     required: true,
+                    description: "ID of the product whose keywords to export",
                     displayOptions: {
                         show: {
                             resource: [
@@ -759,6 +774,7 @@ class Outrank {
                     type: "string",
                     default: "",
                     required: true,
+                    description: "ID of the product whose keywords to list",
                     displayOptions: {
                         show: {
                             resource: [
@@ -791,19 +807,22 @@ class Outrank {
                             displayName: "Article Subtype",
                             name: "article_subtype",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter keywords by article subtype"
                         },
                         {
                             displayName: "Article Type",
                             name: "article_type",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter keywords by article type"
                         },
                         {
                             displayName: "Difficulty Max",
                             name: "difficulty_max",
                             type: "number",
                             default: 0,
+                            description: "Maximum difficulty score for returned keywords",
                             typeOptions: {
                                 minValue: 0,
                                 maxValue: 100
@@ -814,6 +833,7 @@ class Outrank {
                             name: "difficulty_min",
                             type: "number",
                             default: 0,
+                            description: "Minimum difficulty score for returned keywords",
                             typeOptions: {
                                 minValue: 0,
                                 maxValue: 100
@@ -849,25 +869,29 @@ class Outrank {
                             displayName: "Scheduled From",
                             name: "scheduled_from",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include keywords scheduled on or after this date"
                         },
                         {
                             displayName: "Scheduled To",
                             name: "scheduled_to",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Include keywords scheduled on or before this date"
                         },
                         {
                             displayName: "Scope",
                             name: "scope",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter keywords by scope"
                         },
                         {
                             displayName: "Search Volume Max",
                             name: "search_volume_max",
                             type: "number",
                             default: 0,
+                            description: "Maximum search volume for returned keywords",
                             typeOptions: {
                                 minValue: 0
                             }
@@ -877,6 +901,7 @@ class Outrank {
                             name: "search_volume_min",
                             type: "number",
                             default: 0,
+                            description: "Minimum search volume for returned keywords",
                             typeOptions: {
                                 minValue: 0
                             }
@@ -885,7 +910,8 @@ class Outrank {
                             displayName: "Status",
                             name: "status",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter keywords by status"
                         }
                     ]
                 },
@@ -1033,7 +1059,8 @@ class Outrank {
                             displayName: "Status",
                             name: "status",
                             type: "string",
-                            default: ""
+                            default: "",
+                            description: "Filter products by status"
                         }
                     ]
                 },
@@ -1249,6 +1276,7 @@ class Outrank {
                             name: "months",
                             type: "number",
                             default: 0,
+                            description: "Number of recent months of performance data to include (1\u201316)",
                             typeOptions: {
                                 minValue: 1,
                                 maxValue: 16
@@ -1360,7 +1388,7 @@ class Outrank {
                         const qs = {};
                         const headers = {};
                         const body = {};
-                        setBodyField(body, { "name": "keyword_id", "displayName": "Keyword id", "type": "string", "required": true, "description": "Identifier of the keyword for which to create the article." }, this.getNodeParameter("keyword_id", itemIndex), this, itemIndex);
+                        setBodyField(body, { "name": "keyword_id", "displayName": "Keyword id", "description": "Identifier of the keyword for which to create the article.", "type": "string", "required": true }, this.getNodeParameter("keyword_id", itemIndex), this, itemIndex);
                         const serverBaseUrl = (0, http_1.resolveServerBaseUrl)(this, [{ "id": "documentServer1HttpsWwwOutrankSoApiAgentV1", "url": "https://www.outrank.so/api/agent/v1", "kind": "selectable", "variables": [] }], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
                         options = { method: "POST", url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
                         credentialApplications = ([{ "credentialType": "outrankApi", "type": "bearer" }]);
@@ -1448,7 +1476,7 @@ class Outrank {
                         const qs = {};
                         const headers = {};
                         const body = {};
-                        setBodyField(body, { "name": "keyword_id", "displayName": "Keyword id", "type": "string", "required": true, "description": "Identifier of the keyword for which to create the article." }, this.getNodeParameter("keyword_id", itemIndex), this, itemIndex);
+                        setBodyField(body, { "name": "keyword_id", "displayName": "Keyword id", "description": "Identifier of the keyword for which to create the article.", "type": "string", "required": true }, this.getNodeParameter("keyword_id", itemIndex), this, itemIndex);
                         const serverBaseUrl = (0, http_1.resolveServerBaseUrl)(this, [{ "id": "documentServer1HttpsWwwOutrankSoApiAgentV1", "url": "https://www.outrank.so/api/agent/v1", "kind": "selectable", "variables": [] }], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
                         options = { method: "POST", url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
                         credentialApplications = ([{ "credentialType": "outrankApi", "type": "bearer" }]);
@@ -1549,9 +1577,9 @@ class Outrank {
                         const body = {};
                         if (additionalFields["Idempotency-Key"] !== undefined)
                             headers["Idempotency-Key"] = additionalFields["Idempotency-Key"];
-                        setBodyField(body, { "name": "additional_products", "displayName": "Additional products", "type": "integer", "required": true, "minValue": 1, "maxValue": 30, "description": "Integer range accepted by the official CLI; the public reference does not define its semantics." }, this.getNodeParameter("additional_products", itemIndex), this, itemIndex);
+                        setBodyField(body, { "name": "additional_products", "displayName": "Additional products", "description": "Integer range accepted by the official CLI; the public reference does not define its semantics.", "type": "integer", "required": true, "minValue": 1, "maxValue": 30 }, this.getNodeParameter("additional_products", itemIndex), this, itemIndex);
                         if (additionalFields["confirm_charge_cents"] !== undefined)
-                            setBodyField(body, { "name": "confirm_charge_cents", "displayName": "Confirm charge cents", "type": "integer", "minValue": 0, "description": "Confirmed charge amount in cents for the purchase flow." }, additionalFields["confirm_charge_cents"], this, itemIndex);
+                            setBodyField(body, { "name": "confirm_charge_cents", "displayName": "Confirm charge cents", "description": "Confirmed charge amount in cents for the purchase flow.", "type": "integer", "minValue": 0 }, additionalFields["confirm_charge_cents"], this, itemIndex);
                         const serverBaseUrl = (0, http_1.resolveServerBaseUrl)(this, [{ "id": "documentServer1HttpsWwwOutrankSoApiAgentV1", "url": "https://www.outrank.so/api/agent/v1", "kind": "selectable", "variables": [] }], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
                         options = { method: "POST", url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
                         credentialApplications = ([{ "credentialType": "outrankApi", "type": "bearer" }]);
@@ -1857,9 +1885,9 @@ class Outrank {
                         const headers = {};
                         const body = {};
                         path = path.split("{id}").join(encodeURIComponent(String(this.getNodeParameter("id", itemIndex))));
-                        setBodyField(body, { "name": "inspection_url", "displayName": "Inspection url", "type": "string", "required": true, "description": "URL to inspect." }, this.getNodeParameter("inspection_url", itemIndex), this, itemIndex);
+                        setBodyField(body, { "name": "inspection_url", "displayName": "Inspection url", "description": "URL to inspect.", "type": "string", "required": true }, this.getNodeParameter("inspection_url", itemIndex), this, itemIndex);
                         if (additionalFields["language_code"] !== undefined)
-                            setBodyField(body, { "name": "language_code", "displayName": "Language code", "type": "string", "description": "Optional language code." }, additionalFields["language_code"], this, itemIndex);
+                            setBodyField(body, { "name": "language_code", "displayName": "Language code", "description": "Optional language code.", "type": "string" }, additionalFields["language_code"], this, itemIndex);
                         const serverBaseUrl = (0, http_1.resolveServerBaseUrl)(this, [{ "id": "documentServer1HttpsWwwOutrankSoApiAgentV1", "url": "https://www.outrank.so/api/agent/v1", "kind": "selectable", "variables": [] }], "documentServer1HttpsWwwOutrankSoApiAgentV1", nodeOptions, false);
                         options = { method: "POST", url: serverBaseUrl.url + path, qs, headers: { ...headers, ...{ 'Content-Type': "application/json" } }, body: body, json: true, arrayFormat: "indices", ...(serverBaseUrl.blockRedirects ? { maxRedirects: 0 } : {}) };
                         credentialApplications = ([{ "credentialType": "outrankApi", "type": "bearer" }]);
